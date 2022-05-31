@@ -6,21 +6,29 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>This is FRONTEND</title>
 	<script src="script.js" defer></script> <!---A defer azt biztosítja, hogy előbbbetöltődjön a HTML és utána fusson le a JavaScript-->
+	<script src="save-docs.js"></script>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 	<!-- <div id="root"></div> -->
 
 	<!---Átirányítodik egy másik weboldalra-->
-	<form id="form-google-search" action="https://www.google.com/search" method="get">
+	<form class="hidden" id="form-google-search" action="https://www.google.com/search" method="get">
 		<a href="https://www.google.com/search?q=javascript">Keresés</a>
 		<input name="q" type="text">
 		<button id="btn-google-search">Send</button>
 	</form>
 
-	<form action="" method="post">
+	<form class="hidden" action="" method="post">
 		<input name="username" type="text">
 		<input name="password" type="password">
 		<button>Send</button>
 	</form>
+
+	<div class="docs">
+		<label for="doc-text">A dokumentum szövege</label>
+		<textarea name="doc-text" id="doc-text" cols="30" rows="10"></textarea>
+		<p class="hidden" id="save-in-progress-text">Mentés...</p>
+	</div>
 </body>
 </html>
