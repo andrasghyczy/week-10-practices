@@ -5,8 +5,22 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>This is FRONTEND</title>
+	<script src="script.js" defer></script> <!---A defer azt biztosítja, hogy előbbbetöltődjön a HTML és utána fusson le a JavaScript-->
 </head>
 <body>
-	<div id="root"></div>
+	<!-- <div id="root"></div> -->
+
+	<!---Átirányítodik egy másik weboldalra-->
+	<form id="form-google-search" action="https://www.google.com/search" method="get">
+		<a href="https://www.google.com/search?q=javascript">Keresés</a>
+		<input name="q" type="text">
+		<button id="btn-google-search">Send</button>
+	</form>
+
+	<form action="" method="post">
+		<input name="username" type="text">
+		<input name="password" type="password">
+		<button>Send</button>
+	</form>
 </body>
 </html>
