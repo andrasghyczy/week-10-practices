@@ -7,13 +7,13 @@ async function save () {
     const saveText = document.querySelector('#save-in-progress-text');
     saveText.classList.remove('hidden'); // class változtatása,hogy előtűnjön mentés közben, levesszük a "hidden" class css propertieit
 
-    await fetch("http://127.0.0.1:9000/", { // a / után lehetne írni, hogy save és akkor a backendben egy adatbázisba lementené //
+    await fetch("http://127.0.0.1:3000/save", { // a / után lehetne írni, hogy save és akkor a backendben egy adatbázisba lementené //
         method: "POST",
         body: docText
     })
         saveText.classList.add('hidden');
-    }); 
-}
+    }; 
+
 
 
 /*fetch("http://127.0.0.1:9000/", { // a / után lehetne írni, hogy save és akkor a backendben egy adatbázisba lementené //
